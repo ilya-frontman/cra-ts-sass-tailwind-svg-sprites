@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.scss';
 
-import '../../public/sprites/sprite.svg';
+import Sprite from '../assets/sprites/sprite.svg';
 
 const apiHost = process.env.REACT_APP_API_HOST;
 
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="flex items-center">
       <svg>
-        <use xlinkHref="logo" />
+        <use xlinkHref={`${Sprite}#logo`} />
       </svg>
       <button
         type="button"
