@@ -27,8 +27,8 @@
     "eslint": "eslint . --ext=.ts,.tsx --cache",
     "eslint:fix": "eslint --fix \".\" --ext=.ts,.tsx",
     "format": "prettier --write \"./**/*.(scss|css|html|ts|tsx)\"",
-    "svg:compress": "svgo -f ./src/assets/svg/ -o ./src/assets/svg/",
-    "svg:sprite": "svg-symbol-sprite -i ./src/assets/svg -p '' -o ./src/assets/sprites/sprite.svg",
+    "svg:compress": "svgo --config=./svgo.config.js -f ./src/assets/svg/ -o ./src/assets/svg/",
+    "svg:sprite": "svg-symbol-sprite -i ./src/assets/svg -p \"\" -o ./src/assets/sprites/sprite.svg",
     "clean": "rm -rf build"
   },
   "eslintConfig": {

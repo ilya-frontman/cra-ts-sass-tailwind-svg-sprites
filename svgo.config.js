@@ -33,6 +33,11 @@ module.exports = {
     'removeDimensions',
     {
       name: 'preset-default',
+      params: {
+        overrides: {
+          cleanupIds: false,
+        },
+      },
     },
   ],
 };
