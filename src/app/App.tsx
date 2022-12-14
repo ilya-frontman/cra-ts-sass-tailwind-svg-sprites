@@ -1,34 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.scss';
 
 import Sprite from '../assets/sprites/sprite.svg';
 
-const apiHost = process.env.REACT_APP_API_HOST;
-
 function App() {
-  const [now, setNow] = useState();
-
-  async function onClick() {
-    const res = await fetch(`${apiHost}/now`);
-    const json = await res.json();
-    setNow(json);
-  }
-
   return (
-    <div className="flex items-center">
-      <svg>
-        <use xlinkHref={`${Sprite}#logo`} />
-      </svg>
-      <button
-        type="button"
-        className="px-4 py-2 m-2 bg-black border-0 text-gray-100 rounded-3xl"
-        onClick={onClick}
-      >
-        Present
-      </button>
-      {now && <p className="ml-6 text-xl text-gray-800">{now}</p>}
+    <div className="App">
+      <header className="App-header">
+        <svg className="App-logo">
+          <use xlinkHref={`${Sprite}#logo`} />
+        </svg>
+
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
-
 export default App;
